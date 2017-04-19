@@ -141,10 +141,10 @@
     //rac_signalForControlEvents: 产生某个事件的时候转换成信号，然后订阅此信号就可以响应
     [[self.loginBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
         
+        @strongify(self);
+        
         [self.view endEditing:YES];
-        
-        //@strongify(self);
-        
+
         //RACCommand：RAC中用于处理事件的类，可以把事件如何处理，事件中的数据如何传递，包装到这个类中，它可以很方便的监控事件的执行过程。
         //使用场景:监听按钮点击，，网络请求
         //execute:执行RACCommand

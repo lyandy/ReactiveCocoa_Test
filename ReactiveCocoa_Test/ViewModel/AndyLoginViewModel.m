@@ -8,7 +8,7 @@
 
 #import "AndyLoginViewModel.h"
 //这个头文件要单独加。
-#import "RACReturnSignal.h"
+//#import "RACReturnSignal.h"
 
 @implementation AndyLoginViewModel
 

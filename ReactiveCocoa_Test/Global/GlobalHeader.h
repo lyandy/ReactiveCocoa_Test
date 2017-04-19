@@ -14,8 +14,7 @@
 
 //https://github.com/SnapKit/Masonry
 
-#import "ReactiveCocoa.h"
-#import "RACReturnSignal.h"
+#import "ReactiveObjC.h"
 #import "AFNetworking.h"
 #import "Masonry.h"
 

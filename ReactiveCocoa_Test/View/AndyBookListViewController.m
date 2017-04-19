@@ -10,7 +10,7 @@
 #import "AndyBookListViewModel.h"
 #import "AndyBookCell.h"
 #import "AndyBookModel.h"
-#import "RACReturnSignal.h"
+#import <ReactiveObjC/RACReturnSignal.h>
 
 @interface AndyBookListViewController ()<UITableViewDelegate, UITableViewDataSource>
 
@@ -170,8 +170,8 @@
 {
     AndyBookModel *bookModel = self.bookListArrayM[indexPath.row];
     //改变指定Model的值，界面上也会相应改变。KVO通知。本质就是监听一个对象有没有调用成员变量的set方法。如果不是调用成员变量的set方法，则kvo就监听不到内容，也就无法发出信号。
-    //bookModel.title = @"我变了";
-    //bookModel.testSignal = [RACReturnSignal return:@"我变了"];
+    bookModel.title = @"我变了";
+    //bookModel.testSignal = [RACReturnSignal return:@"我变了哈哈"];
     //bookModel->_title = @"再次改变";
 }
 
